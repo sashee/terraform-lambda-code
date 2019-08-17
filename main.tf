@@ -11,10 +11,8 @@ data "archive_file" "lambda_zip_inline" {
   source {
     content  = <<EOF
 module.exports.handler = async (event, context, callback) => {
-	const response = {
-		statusCode: 200,
-		body: "Hello world!",
-	};
+	const what = "world";
+	const response = `Hello $${what}!`;
 	callback(null, response);
 };
 EOF
