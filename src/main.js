@@ -1,6 +1,6 @@
-module.exports.handler = async (event, context, callback) => {
+module.exports.handler = async (event, context) => {
 	const what = "world";
 	const response = `Hello ${what}!`;
-	callback(null, response);
+	return response;
 };
 

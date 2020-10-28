@@ -6,7 +6,7 @@
 ## Observe
 
 ```
-terraform output | awk -F' = ' '{print $2}' | xargs -I {} aws lambda invoke --function-name {} >(cat) > /dev/null'
+terraform output | awk -F' = ' '{print $2}' | xargs -I {} aws lambda invoke --function-name {} >(cat) > /dev/null
 ```
 
 ## Update
